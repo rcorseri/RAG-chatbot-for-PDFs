@@ -43,4 +43,22 @@ Create a `.env` file with your API keys:
 # Required tokens
 MISTRAL_API_KEY=your_mistral_api_key_here
 HUGGINGFACE_API_TOKEN=your_huggingface_token_here
-LANGCHAIN_API_KEY=your_langchain_api_key_here  # Optional for tracing• "What are the inclination and azimuth values at 145.90m MD?"
+LANGCHAIN_API_KEY=your_langchain_api_key_here 
+
+#### 2. **Install dependencies**
+```bash
+pip install -r requirements.txt
+
+#### 3. **Copy your PDF documents in the data folder**
+```bash
+mkdir data
+
+#### 4. **Process your documents, create the embeddings and store in vector database**
+```bash
+mkdir vectordb
+python ingest.py
+
+#### 4. **Start chatting with your PDF documens in natural language**
+```bash
+python chat.py
+
